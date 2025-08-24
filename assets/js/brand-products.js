@@ -69,9 +69,11 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
+    document.getElementById("loader").style.display = "flex"; // show
+
 
     // ✅ Send to FormSubmit
-    fetch("https://script.google.com/macros/s/AKfycbyXwMIdFGOtPPA4Z30cNKdCPQa94z23dA3bPipWyG0SstnmAKpXCZnmOkXiVgcl8LTX/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbz8SJRBA73R77PFd4JM-IkFE_YExR5GzQ3tH-n_ssRM3ur2dAZE2naMqD_BkJOKC3Pq/exec", {
       method: "POST",
       body: JSON.stringify({
         name,
@@ -89,10 +91,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         modal.style.display = "none";
+        document.getElementById("loader").style.display = "none"; // show
+
         form.reset();
       })
       .catch(err => {
         console.error("Error:", err);
+        document.getElementById("loader").style.display = "none"; // show
+
         alert("Something went wrong. Please try again.");
       });
 

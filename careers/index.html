@@ -232,7 +232,7 @@
                                     </a>
 
 
-                                    
+
 
 
                                     <a href="../products/future decore/" class="brand-item">
@@ -245,38 +245,39 @@
                                         </div>
                                         <div class="brand-name">PU Stones & Leafs</div>
                                     </a>
-                                       <a href="../products/stardec/" class="brand-item">
-                    <div class="brand-image-container">
-                      <img src="../assets/images/brands/StarDECOR/product.jpeg" alt="Charcoal Louvers - Star Dec  "
-                        class="brand-image" loading="lazy">
-                      <div class="brand-overlay">
-                        <span class="view-products-text">View Products</span>
-                      </div>
-                    </div>
-                    <div class="brand-name"> Charcoal Louvers </div>
-                  </a>
+                                    <a href="../products/stardec/" class="brand-item">
+                                        <div class="brand-image-container">
+                                            <img src="../assets/images/brands/StarDECOR/product.jpeg"
+                                                alt="Charcoal Louvers - Star Dec  " class="brand-image" loading="lazy">
+                                            <div class="brand-overlay">
+                                                <span class="view-products-text">View Products</span>
+                                            </div>
+                                        </div>
+                                        <div class="brand-name"> Charcoal Louvers </div>
+                                    </a>
 
-                  <a href="../products/artificial-garden/" class="brand-item">
-                    <div class="brand-image-container">
-                      <img src="../assets/images/brands/artificial-garden/Artificial Vertical Garden.jpg" alt="Artificial Vertical Garden Products"
-                        class="brand-image" loading="lazy">
-                      <div class="brand-overlay">
-                        <span class="view-products-text">View Products</span>
-                      </div>
-                    </div>
-                    <div class="brand-name"> Artificial Garden </div>
-                  </a>
+                                    <a href="../products/artificial-garden/" class="brand-item">
+                                        <div class="brand-image-container">
+                                            <img src="../assets/images/brands/artificial-garden/Artificial Vertical Garden.jpg"
+                                                alt="Artificial Vertical Garden Products" class="brand-image"
+                                                loading="lazy">
+                                            <div class="brand-overlay">
+                                                <span class="view-products-text">View Products</span>
+                                            </div>
+                                        </div>
+                                        <div class="brand-name"> Artificial Vertical Garden </div>
+                                    </a>
 
-                  <a href="../products/cane-webbing/" class="brand-item">
-                    <div class="brand-image-container">
-                      <img src="../assets/images/brands/cane-webbing/Cane webbing.jpg" alt="Cane webbing Products"
-                        class="brand-image" loading="lazy">
-                      <div class="brand-overlay">
-                        <span class="view-products-text">View Products</span>
-                      </div>
-                    </div>
-                    <div class="brand-name"> Cane Webbing </div>
-                  </a>
+                                    <a href="../products/cane-webbing/" class="brand-item">
+                                        <div class="brand-image-container">
+                                            <img src="../assets/images/brands/cane-webbing/Cane webbing.jpg"
+                                                alt="Cane webbing Products" class="brand-image" loading="lazy">
+                                            <div class="brand-overlay">
+                                                <span class="view-products-text">View Products</span>
+                                            </div>
+                                        </div>
+                                        <div class="brand-name"> Cane Webbing </div>
+                                    </a>
 
 
 
@@ -367,7 +368,7 @@
         <div class="form-card">
             <h2>Apply for a Job</h2>
 
-            <form id="jobApplicationForm" action="https://formsubmit.co/archedgepro@gmail.com" method="POST" novalidate>
+            <form id="jobApplicationForm"  method="POST"  enctype="multipart/form-data">
 
                 <!-- Personal Info -->
                 <div class="form-group">
@@ -422,17 +423,10 @@
 
                 <!-- Upload -->
                 <div class="form-group">
-                    <label for="resume">Upload Resume (PDF/DOC) *</label>
-                    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                    <label for="resume">Upload Resume (PDF) *</label>
+                    <input type="file" id="resume" name="resume" accept=".pdf" required>
                 </div>
 
-                <input type="hidden" name="_next" value="https://archedge.pro/careers/applied-sucessfully.html">
-                <!-- Redirect to thank-you page -->
-                <input type="hidden" name="_subject" value="Job Request Application"> <!-- Custom email subject -->
-                <input type="hidden" name="_autoresponse" value="Thank you! We will respond soon.">
-                <!-- Auto reply to user -->
-                <input type="hidden" name="form_type" value="Job-Aplication_form">
-                <!-- Custom hidden info you want to send -->
 
 
                 <button type="submit">Submit Application</button>
@@ -498,15 +492,15 @@
             <div class="footer-column">
                 <h4>Visit Us</h4>
                 <p>
-          H.No: 11-13-302, <br>
-          Ground Floor,<br>
-          Road No - 9, <br>
-          Alkapuri Colony, <br>
-          Kothapet, <br>
-          Saroornagar Mandal,<br>
-          Hyderabad,<br>
-          Ranga Reddy Dist. 500035.
-        </p>
+                    H.No: 11-13-302, <br>
+                    Ground Floor,<br>
+                    Road No - 9, <br>
+                    Alkapuri Colony, <br>
+                    Kothapet, <br>
+                    Saroornagar Mandal,<br>
+                    Hyderabad,<br>
+                    Ranga Reddy Dist. 500035.
+                </p>
             </div>
 
             <div class="footer-column">
@@ -534,7 +528,7 @@
 
     <script src="../assets/js/navbar.js" defer></script>
     <script>
-        document.getElementById("jobApplicationForm").addEventListener("submit", function (e) {
+        document.getElementById("jobApplicationForm").addEventListener("submit",async function (e) {
             e.preventDefault(); // Prevent default form submission
             const form = e.target;
 
@@ -562,6 +556,7 @@
             const skills = form.skills.value.trim();
             const coverLetter = form.coverLetter.value.trim();
             const resume = form.resume.files[0];
+            
 
             // Validation patterns
             const namePattern = /^[A-Za-z ]+$/;
@@ -619,15 +614,44 @@
                 showError(form.resume, "Please upload your resume.");
                 return;
             } else {
-                const allowedExt = /(\.pdf|\.doc|\.docx)$/i;
+                const allowedExt = /(\.pdf)$/i;
                 if (!allowedExt.exec(resume.name)) {
-                    showError(form.resume, "Resume must be a PDF or DOC/DOCX file.");
+                    showError(form.resume, "Resume must be a PDF  file only.");
                     return;
                 }
             }
 
-            // If all validations pass, submit the form
-            form.submit();
+            const formData = new FormData();
+            formData.append("fullName", fullName);
+            formData.append("email", email);
+            formData.append("phone", phone);
+            formData.append("city", city);
+            formData.append("jobTitle", jobTitle);
+            formData.append("experience", experience);
+            formData.append("highestEdu", highestEdu);
+            formData.append("skills", skills);
+            formData.append("coverLetter", coverLetter);
+            formData.append("sheetName", "job");
+
+            document.getElementById("loader").style.display = "flex"; // show
+
+
+            fetch("https://script.google.com/macros/s/AKfycbzYnt1KbABGTNw7JaKXG1swZYH8EoPEiZupq9QZuE8Ee87eXBsWqiY8N1h973Hdjck5RA/exec", {
+                method: "POST",
+                body: formData
+            })
+                .then(res => res.json())
+                .then(response => {
+                        
+                        window.location.href = "./applied-successfully"; // redirect
+                    
+                })
+                .catch(err => {
+                    document.getElementById("loader").style.display = "none"; // show
+
+                    console.error("Error:", err);
+                    alert("Something went wrong. Please try again.");
+                });
         });
 
         document.getElementById("contactForm").addEventListener("submit", function (e) {
@@ -674,15 +698,18 @@
                 showError(form.msg, "Please enter your message.");
                 return;
             }
-            fetch("https://script.google.com/macros/s/AKfycbzwR4dc1ebzEJxLJK1fjOuqCs5WIslmYpfuXsYTmR2Y9rmaZw-tUp82ZqvID9NGlpwCIg/exec", {
+            const formData = new FormData();
+            formData.append("company", company);
+            formData.append("email", email);
+            formData.append("phone", contact);
+            formData.append("message", msg);
+            formData.append("sheetName", "collaboration");
+
+            document.getElementById("loader").style.display = "flex"; // show
+
+            fetch("https://script.google.com/macros/s/AKfycbzYnt1KbABGTNw7JaKXG1swZYH8EoPEiZupq9QZuE8Ee87eXBsWqiY8N1h973Hdjck5RA/exec", {
                 method: "POST",
-                body: JSON.stringify({
-                    company,
-                    email,
-                    phone:contact,
-                    message: msg,
-                    sheetName: "Collaborations"  // ✅ must exactly match your Google Sheet tab name
-                })
+                body: formData
             })
                 .then(res => res.text())
                 .then(response => {
@@ -690,6 +717,8 @@
                     window.location.href = "./collaboration/"; // redirect on success
                 })
                 .catch(err => {
+                    document.getElementById("loader").style.display = "none"; // show
+
                     console.error("Error:", err);
                     alert("Something went wrong. Please try again.");
                 });
@@ -698,6 +727,48 @@
         });
 
     </script>
+
+    <!-- Full-page Animated Loader -->
+<div id="loader" style="
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    z-index:9999;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-family: 'Inter', sans-serif;
+    font-weight:bold;
+">
+    <!-- Spinner -->
+    <div style="
+        border: 6px solid rgba(255,255,255,0.3);
+        border-top: 6px solid #fff;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 1s linear infinite;
+        margin-bottom: 20px;
+    "></div>
+
+    <!-- Text -->
+    <div style="font-size:18px;">Sending your Message, please wait...</div>
+</div>
+
+<!-- Spinner Animation -->
+<style>
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+</style>
+
+
 
 </body>
 
