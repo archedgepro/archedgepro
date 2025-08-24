@@ -1,69 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thank You for Contacting Us | Archedge</title>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You | Archedge Hyderabad</title>
+  
+  <!-- Meta Description -->
+  <meta name="description" content="Thank you for contacting Archedge Interiors. We will get back to you shortly. Discover our premium wall panels, ceilings, flooring, and interior solutions in Hyderabad.">
+  
 
-<!-- SEO Meta Tags -->
-<meta name="description" content="Thank you for reaching out to Archedge. Our team will review your message and get back to you promptly. Explore our products and services while you wait.">
-<meta name="keywords" content="Archedge, Interior Design, Decorative Panels, Thank You, Contact, Inquiry">
-<meta name="robots" content="index, follow">
+  <!-- Open Graph for Social Sharing -->
+  <meta property="og:title" content="Thank You | Archedge  Hyderabad">
+  <meta property="og:description" content="We have successfully received your message. Explore premium decorative wall panels, ceilings, and flooring by Archedge Interiors.">
+  <meta property="og:image" content="https://archedge.pro/assets/images/logo.png">
+  <meta property="og:url" content="https://archedge.pro/contact/thankyou">
+  <meta property="og:type" content="website">
 
-<!-- Social Media / Open Graph -->
-<meta property="og:title" content="Thank You for Contacting Archedge">
-<meta property="og:description" content="We received your message and our team will respond shortly. Discover our premium decorative panels and interior design solutions.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.yourdomain.com/thank-you">
-<meta property="og:image" content="https://www.yourdomain.com/assets/images/thank-you-banner.jpg">
+  <!-- Canonical -->
+  <link rel="canonical" href="https://archedge.pro/contact/thankyou">
 
-<style>
+  <!-- Robots (Optional: prevent ranking if you want) -->
+  <meta name="robots" content="noindex, follow">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+  <style>
     body {
-        font-family: 'Inter', sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        margin: 0;
-        background: linear-gradient(to bottom, #f0f4f8, #ffffff);
-        text-align: center;
-        padding: 20px;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #f8f5f2, #e6e2df);
+      overflow: hidden;
     }
+
+    .container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+      max-width: 600px;
+      animation: fadeInUp 1.5s ease forwards;
+      position: relative;
+    }
+
     h1 {
-        color: #222;
-        font-size: 3rem;
-        margin-bottom: 20px;
+      font-size: 3rem;
+      color: #2c3e50;
+      margin-bottom: 10px;
+      animation: glow 2s infinite alternate;
     }
+
+    .separator {
+      width: 80px;
+      height: 4px;
+      background: #ff914d;
+      margin: 20px auto;
+      border-radius: 5px;
+      animation: expand 1.5s ease;
+    }
+
     p {
-        color: #555;
-        font-size: 1.2rem;
-        max-width: 600px;
-        line-height: 1.6;
+      font-size: 1.2rem;
+      color: #555;
+      margin: 20px 0;
+      line-height: 1.6;
     }
-    a.button {
-        display: inline-block;
-        margin-top: 30px;
-        padding: 12px 30px;
-        background: #007bff;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 6px;
-        font-weight: 500;
-        transition: background 0.3s, transform 0.2s;
+
+    .button {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      background: linear-gradient(45deg, #ff914d, #ff6f61);
+      box-shadow: 0 8px 20px rgba(255,111,97,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    a.button:hover {
-        background: #0056b3;
-        transform: translateY(-2px);
+
+    .button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(255,111,97,0.4);
     }
-</style>
+
+    .testimonial {
+      margin-top: 30px;
+      font-style: italic;
+      color: #333;
+      font-size: 1.1rem;
+      position: relative;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #ff914d, 0 0 10px #ff6f61; }
+      to { text-shadow: 0 0 20px #ff6f61, 0 0 40px #ff914d; }
+    }
+
+    @keyframes expand {
+      from { width: 0; opacity: 0; }
+      to { width: 80px; opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Confetti */
+    .confetti {
+      position: absolute;
+      top: -10px;
+      width: 10px;
+      height: 10px;
+      background: #ff914d;
+      opacity: 0.7;
+      animation: fall 4s linear infinite;
+    }
+
+    .confetti:nth-child(2) { left: 20%; animation-delay: 1s; background: #ff6f61; }
+    .confetti:nth-child(3) { left: 40%; animation-delay: 2s; background: #ffd166; }
+    .confetti:nth-child(4) { left: 60%; animation-delay: 0.5s; background: #06d6a0; }
+    .confetti:nth-child(5) { left: 80%; animation-delay: 1.5s; background: #118ab2; }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0); opacity: 1; }
+      100% { transform: translateY(600px) rotate(360deg); opacity: 0; }
+    }
+  </style>
 </head>
 <body>
-    <h1>Thank You for Contacting Archedge!</h1>
-    <p>We appreciate your interest in our interior and decorative solutions.
-         Our team has received your message and will respond as soon as possible.
-          Meanwhile, feel free to explore our latest products and inspiration for your space.</p>
+
+  <div class="container">
+    <!-- Confetti Elements -->
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+
+    <h1>🎉 Thank You!</h1>
+    <div class="separator"></div>
+    <p>
+      We have successfully received your message.  
+      Our team at <b>Archedge</b> will get back to you shortly.  
+      In the meantime, explore our latest projects, premium decorative solutions, and design inspirations.
+    </p>
     
     <a class="button" href="/">Return to Home</a>
- </body>
+
+    <div class="testimonial">✨ "Creating luxurious and personalized spaces that inspire – Archedge" ✨</div>
+  </div>
+
+</body>
 </html>
