@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You - Job Application</title>
+  <meta name="description" content="Thank you for submitting your job application. We will review your details and get back to you soon.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    .btn-home {
+      background: #fff;
+      color: #2575fc;
+      padding: 12px 30px;
+      font-weight: 600;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+    .btn-home:hover {
+      background: #e0e0e0;
+      color: #1a4db0;
+    }
+    .confetti {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .confetti span {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #fff;
+      opacity: 0.7;
+      animation: fall 3s linear infinite;
+    }
+    @keyframes fall {
+      0% { transform: translateY(-10px) rotate(0deg); }
+      100% { transform: translateY(100vh) rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="confetti">
+    <span style="left:10%; animation-delay:0s;"></span>
+    <span style="left:20%; animation-delay:0.5s;"></span>
+    <span style="left:30%; animation-delay:1s;"></span>
+    <span style="left:40%; animation-delay:1.5s;"></span>
+    <span style="left:50%; animation-delay:2s;"></span>
+  </div>
+  <h1>Thank You!</h1>
+  <p>Your job application has been submitted successfully.<br>We will review your profile and contact you soon.</p>
+  <a class="btn-home" href="/">Go Back to Home</a>
+</body>
+</html>
