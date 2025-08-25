@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Auto-advance slides every 6 seconds (longer to appreciate zoom effect)
-  setInterval(nextHeroSlide, 4000);
+  setInterval(nextHeroSlide, 8000);
 
   // Indicator click handlers
   indicators.forEach((indicator, i) => {
