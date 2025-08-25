@@ -390,21 +390,21 @@ a {
 
     .brands-dropdown {
         padding: 20px;
-        max-width: 95vw;
+        max-width: 100vw;
         left: 50%;
         transform: translateX(-50%) translateY(-15px);
     }
 
     .brands-row {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 350px;
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 300px;
         margin: 0 auto;
 
         gap: 16px;
     }
 
     .categories-dropdown {
-        margin-left: 80px;
+        margin-left: 70px;
     }
 
     .brands-dropdown {
@@ -435,13 +435,12 @@ a {
 /* Very small mobile */
 @media (max-width: 480px) {
     .brands-dropdown {
-        padding: 16px;
-        max-width: 98vw;
+        max-width: 100vw;
     }
 
     .brands-row {
         max-width: 300px;
-        gap: 12px;
+        gap: 10px;
     }
 
     .brand-image-container {
@@ -634,9 +633,9 @@ a {
         /* shift slightly right */
         transform: none;
         /* remove old translation */
-        width: calc(100% - 20px);
+        width: calc(100% - 0px);
         /* slightly smaller than parent width */
-        max-width: 95%;
+        max-width: 100%;
         padding: 15px 20px;
         border-radius: 12px;
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
