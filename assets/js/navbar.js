@@ -19,10 +19,11 @@ document.addEventListener('DOMContentLoaded', function () {
   // Auto open after 1 sec if no submission today
   window.addEventListener("load", () => {
     setTimeout(() => {
-      if (!hasSubmittedAutoToday()) {
+      
+      if (autoModal && !hasSubmittedAutoToday()) {
         autoModal.style.display = "flex";
       }
-    }, 1000);
+    }, 4000);
   });
 
   // Close modal

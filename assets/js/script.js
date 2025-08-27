@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (!hasSubmittedAutoToday()) {
         autoModal.style.display = "flex";
       }
-    }, 1000);
+    }, 4000);
   });
 
   // Close modal
