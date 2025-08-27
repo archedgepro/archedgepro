@@ -370,7 +370,7 @@ loaderText.textContent = "🛍️  Your visit means a lot! Check out our premium
   const navItems = document.querySelectorAll('.nav-item > .nav-link');
   navItems.forEach(link => {
     link.addEventListener('click', function (e) {
-      if (window.innerWidth <= 768) {
+      if (window.innerWidth <= 820) {
         const dropdown = this.nextElementSibling;
         if (dropdown) {
           e.preventDefault();
@@ -410,7 +410,7 @@ loaderText.textContent = "🛍️  Your visit means a lot! Check out our premium
 
   // Close mobile menu on window resize
   window.addEventListener('resize', function () {
-    if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
+    if (window.innerWidth > 820 && navMenu.classList.contains('active')) {
       navMenu.classList.remove('active');
       mobileMenuToggle.classList.remove('active');
       document.body.style.overflow = '';
@@ -422,25 +422,7 @@ loaderText.textContent = "🛍️  Your visit means a lot! Check out our premium
   navLinks.forEach(link => {
     link.addEventListener('click', function (e) {
       const href = this.getAttribute('href');
-      if (href.startsWith('#')) {
-        e.preventDefault();
-        const targetSection = document.querySelector(href);
-
-        if (targetSection) {
-          const headerHeight = document.querySelector('.header').offsetHeight;
-          const targetPosition = targetSection.offsetTop - headerHeight;
-
-          window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-          });
-        }
-
-        // Close mobile menu if open
-        navMenu.classList.remove('active');
-        mobileMenuToggle.classList.remove('active');
-      }
-      // else allow default navigation for other links
+      
     });
   });
   const imgs = document.querySelectorAll('.circle-container img');

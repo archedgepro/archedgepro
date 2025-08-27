@@ -145,7 +145,7 @@ setTimeout(() => {
 
         if (dropdown) {
             link.addEventListener('click', function (e) {
-                if (window.innerWidth <= 768) {
+                if (window.innerWidth <= 821) {
                     e.preventDefault();
                     e.stopPropagation();
 
@@ -195,7 +195,7 @@ setTimeout(() => {
 
     // Close mobile menu on window resize
     window.addEventListener('resize', function () {
-        if (window.innerWidth > 768) {
+        if (window.innerWidth > 820) {
             navMenu.classList.remove('active');
             mobileMenuToggle.classList.remove('active');
             document.body.style.overflow = '';
