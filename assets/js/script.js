@@ -103,6 +103,44 @@ showTestimonial(current);
 
 document.addEventListener('DOMContentLoaded', function () {
 
+  // WhatsApp floating button
+  const whatsappButton = document.createElement('button');
+  whatsappButton.innerHTML = '<i class="fab fa-whatsapp"></i>'; // WhatsApp icon
+  whatsappButton.className = 'whatsapp-button';
+  whatsappButton.style.cssText = `
+    position: fixed;
+    bottom: 80px; /* above back-to-top button */
+    right: 20px;
+    background: #25D366;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+    font-size: 28px;
+`;
+
+  // On click, open WhatsApp link
+  whatsappButton.onclick = () => {
+    window.open('https://wa.me/919063021489', '_blank');
+  };
+
+  // Add to page
+  document.body.appendChild(whatsappButton);
+
+  // Optional: hover effect
+  whatsappButton.addEventListener('mouseover', () => {
+    whatsappButton.style.opacity = '1';
+  });
+  whatsappButton.addEventListener('mouseout', () => {
+    whatsappButton.style.opacity = '0.9';
+  });
+
+
 
   const autoModal = document.getElementById("autoFormModal");
   const autoCloseBtn = document.getElementById("closeAutoForm");
@@ -121,14 +159,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Auto open after 1 sec if no submission today
   window.addEventListener("load", () => {
-    
+
     setTimeout(() => {
       const modal = document.getElementById("pdfFormModal");
       const isModalHidden = modal && window.getComputedStyle(modal).display === "none";
-      if ( isModalHidden && !hasSubmittedAutoToday()) {
+      if (isModalHidden && !hasSubmittedAutoToday()) {
         autoModal.style.display = "flex";
       }
-      
+
     }, 4000);
   });
 
@@ -171,9 +209,9 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    document.getElementById("loader").style.display = "flex"; 
+    document.getElementById("loader").style.display = "flex";
     const loaderText = loader.querySelector(".loader-content");
-loaderText.textContent = "🛍️  Your visit means a lot! Check out our premium products and enjoy browsing…";
+    loaderText.textContent = "🛍️  Your visit means a lot! Check out our premium products and enjoy browsing…";
 
     // ✅ Send to Google Sheets (adjust sheet name if needed)
     fetch("https://script.google.com/macros/s/AKfycbz8SJRBA73R77PFd4JM-IkFE_YExR5GzQ3tH-n_ssRM3ur2dAZE2naMqD_BkJOKC3Pq/exec", {
@@ -185,21 +223,21 @@ loaderText.textContent = "🛍️  Your visit means a lot! Check out our premium
         sheetName: "product-seen-clients" // 👈 NEW sheet tab
       })
     })
-    .then(response => {
-      localStorage.setItem("pdfFormSubmitTime", new Date().getTime());
+      .then(response => {
+        localStorage.setItem("pdfFormSubmitTime", new Date().getTime());
 
-      autoModal.style.display = "none";
-      document.getElementById("loader").style.display = "none"; // hide loader
-      autoForm.reset();
-    })
-    .catch(err => {
-      console.error("Error:", err);
-      document.getElementById("loader").style.display = "none"; // hide loader
-      alert("Something went wrong. Please try again.");
-    });
+        autoModal.style.display = "none";
+        document.getElementById("loader").style.display = "none"; // hide loader
+        autoForm.reset();
+      })
+      .catch(err => {
+        console.error("Error:", err);
+        document.getElementById("loader").style.display = "none"; // hide loader
+        alert("Something went wrong. Please try again.");
+      });
   });
 
-  
+
 
   const modal = document.getElementById("pdfFormModal");
   const closeBtn = document.getElementById("closeForm");
@@ -239,64 +277,64 @@ loaderText.textContent = "🛍️  Your visit means a lot! Check out our premium
 
   // Form submission
   form.addEventListener("submit", function (e) {
-  e.preventDefault();
+    e.preventDefault();
 
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const phone = document.getElementById("phone").value.trim();
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
 
-  const namePattern = /^[A-Za-z\s]+$/;
-  const phonePattern = /^[6-9][0-9]{9}$/;
-  const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    const namePattern = /^[A-Za-z\s]+$/;
+    const phonePattern = /^[6-9][0-9]{9}$/;
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
-  if (!name.match(namePattern) || name.length < 3) {
-    alert("Please enter a valid full name (letters only).");
-    return;
-  }
+    if (!name.match(namePattern) || name.length < 3) {
+      alert("Please enter a valid full name (letters only).");
+      return;
+    }
 
-  if (!phone.match(phonePattern)) {
-    alert("Please enter a valid 10-digit phone number");
-    return;
-  }
+    if (!phone.match(phonePattern)) {
+      alert("Please enter a valid 10-digit phone number");
+      return;
+    }
 
-  if (email.length > 0 && !email.match(emailPattern)) {
-    alert("Please enter a valid email address.");
-    return;
-  }
+    if (email.length > 0 && !email.match(emailPattern)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
 
-  document.getElementById("loader").style.display = "flex"; // show
+    document.getElementById("loader").style.display = "flex"; // show
 
 
-  // ✅ Send to Google Sheets
-  fetch("https://script.google.com/macros/s/AKfycbz8SJRBA73R77PFd4JM-IkFE_YExR5GzQ3tH-n_ssRM3ur2dAZE2naMqD_BkJOKC3Pq/exec", {
-    method: "POST",
-    body: JSON.stringify({
-      name,
-      email,
-      phone,
-      sheetName: "product-seen-clients" // 👈 must match tab name
+    // ✅ Send to Google Sheets
+    fetch("https://script.google.com/macros/s/AKfycbz8SJRBA73R77PFd4JM-IkFE_YExR5GzQ3tH-n_ssRM3ur2dAZE2naMqD_BkJOKC3Pq/exec", {
+      method: "POST",
+      body: JSON.stringify({
+        name,
+        email,
+        phone,
+        sheetName: "product-seen-clients" // 👈 must match tab name
+      })
     })
-  })
-    
-    .then(response => {
-      localStorage.setItem("pdfFormSubmitTime", new Date().getTime());
 
-      if (currentPdf) {
-        window.open(currentPdf, "_blank");
-      }
+      .then(response => {
+        localStorage.setItem("pdfFormSubmitTime", new Date().getTime());
 
-      modal.style.display = "none";
-      document.getElementById("loader").style.display = "none"; // show
+        if (currentPdf) {
+          window.open(currentPdf, "_blank");
+        }
 
-      form.reset();
-    })
-    .catch(err => {
-      console.error("Error:", err);
-      document.getElementById("loader").style.display = "none"; // show
+        modal.style.display = "none";
+        document.getElementById("loader").style.display = "none"; // show
 
-      alert("Something went wrong. Please try again.");
-    });
-});
+        form.reset();
+      })
+      .catch(err => {
+        console.error("Error:", err);
+        document.getElementById("loader").style.display = "none"; // show
+
+        alert("Something went wrong. Please try again.");
+      });
+  });
 
   // Hero Section Management
   const heroSlides = document.querySelectorAll('.hero-slide');
@@ -422,7 +460,7 @@ loaderText.textContent = "🛍️  Your visit means a lot! Check out our premium
   navLinks.forEach(link => {
     link.addEventListener('click', function (e) {
       const href = this.getAttribute('href');
-      
+
     });
   });
   const imgs = document.querySelectorAll('.circle-container img');
