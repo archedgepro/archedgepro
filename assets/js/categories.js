@@ -68,7 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
       alert("Please enter a valid email address.");
       return;
     }
-
+  
+     document.getElementById("loader").style.display = "flex";
 
     // ✅ Send to FormSubmit
     fetch("https://formsubmit.co/archedge.pro@gmail.com", {
@@ -90,10 +91,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         modal.style.display = "none";
+        document.getElementById("loader").style.display = "none"; 
         form.reset();
       })
       .catch(err => {
         console.error("❌ Error:", err);
+        document.getElementById("loader").style.display = "none"; 
         alert("Something went wrong. Please try again.");
       });
   });

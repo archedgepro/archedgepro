@@ -121,10 +121,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Auto open after 1 sec if no submission today
   window.addEventListener("load", () => {
+    
     setTimeout(() => {
-      if (!hasSubmittedAutoToday()) {
+      const modal = document.getElementById("pdfFormModal");
+      const isModalHidden = modal && window.getComputedStyle(modal).display === "none";
+      if ( isModalHidden && !hasSubmittedAutoToday()) {
         autoModal.style.display = "flex";
       }
+      
     }, 4000);
   });
 
@@ -167,7 +171,9 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    document.getElementById("loader").style.display = "flex"; // show loader if exists
+    document.getElementById("loader").style.display = "flex"; 
+    const loaderText = loader.querySelector(".loader-content");
+loaderText.textContent = "🛍️  Your visit means a lot! Check out our premium products and enjoy browsing…";
 
     // ✅ Send to Google Sheets (adjust sheet name if needed)
     fetch("https://script.google.com/macros/s/AKfycbz8SJRBA73R77PFd4JM-IkFE_YExR5GzQ3tH-n_ssRM3ur2dAZE2naMqD_BkJOKC3Pq/exec", {
