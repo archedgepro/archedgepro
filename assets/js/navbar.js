@@ -1,41 +1,76 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-  // WhatsApp floating button
   const whatsappButton = document.createElement('button');
-  whatsappButton.innerHTML = '<i class="fab fa-whatsapp"></i>'; // WhatsApp icon
+  whatsappButton.innerHTML = '<i class="fab fa-whatsapp"></i>';
   whatsappButton.className = 'whatsapp-button';
   whatsappButton.style.cssText = `
     position: fixed;
-    bottom: 80px; /* above back-to-top button */
+    bottom: 80px;
     right: 20px;
     background: #25D366;
     color: white;
     border: none;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     cursor: pointer;
-    opacity: 0.9;
-    transition: opacity 0.3s ease;
-    z-index: 1000;
-    font-size: 28px;
-`;
+    opacity: 1;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    z-index: 10000;
+    animation: pulse 2s infinite;
+  `;
 
-  // On click, open WhatsApp link
-  whatsappButton.onclick = () => {
-    window.open('https://wa.me/919063021489', '_blank');
-  };
+  // Create small blinking chat dot
+  const chatDot = document.createElement('span');
+  chatDot.style.cssText = `
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 12px;
+    height: 12px;
+    background: #FF3B30;
+    border-radius: 50%;
+    animation: blink 1s infinite;
+  `;
+  whatsappButton.appendChild(chatDot);
 
-  // Add to page
+  // WhatsApp pre-filled message
+  const phone = "919063021489";
+  const message = "Hello! I want to inquire about your services.";
+  const whatsappLink = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+  whatsappButton.addEventListener('click', () => {
+    window.open(whatsappLink, "_blank");
+  });
+
   document.body.appendChild(whatsappButton);
 
-  // Optional: hover effect
+  // Hover effect
   whatsappButton.addEventListener('mouseover', () => {
-    whatsappButton.style.opacity = '1';
+    whatsappButton.style.transform = 'scale(1.2)';
   });
   whatsappButton.addEventListener('mouseout', () => {
-    whatsappButton.style.opacity = '0.9';
+    whatsappButton.style.transform = 'scale(1)';
   });
+
+  // Add keyframes for pulse and blink dynamically
+  const style = document.createElement('style');
+  style.innerHTML = `
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    @keyframes blink {
+      0%, 50%, 100% { opacity: 1; }
+      25%, 75% { opacity: 0; }
+    }
+  `;
+  document.head.appendChild(style);
 
   // Back to top button
   const backToTopButton = document.createElement('button');
