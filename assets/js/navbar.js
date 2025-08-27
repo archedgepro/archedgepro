@@ -1,9 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    
+
+  // Run modal logic safely after delay
+setTimeout(() => {
   const autoModal = document.getElementById("autoFormModal");
   const autoCloseBtn = document.getElementById("closeAutoForm");
   const autoForm = document.getElementById("autoForm");
+  const loader = document.getElementById("loader");
+
+  // Only proceed if modal exists
+  if (!autoModal) return;
+
+  
 
   // Check if user already submitted today
   function hasSubmittedAutoToday() {
@@ -16,32 +24,23 @@ document.addEventListener('DOMContentLoaded', function () {
     return now - parseInt(lastSubmit, 10) < oneDay;
   }
 
-  // Auto open after 1 sec if no submission today
-  window.addEventListener("load", () => {
-    setTimeout(() => {
-      const modal = document.getElementById("pdfFormModal");
-      if (modal){
-      const isModalHidden = modal && window.getComputedStyle(modal).display === "none";
-      
-      if (autoModal && isModalHidden && !hasSubmittedAutoToday()) {
-        autoModal.style.display = "flex";
-      }
-    } else if(!modal){
-     
-      if (autoModal && !hasSubmittedAutoToday()) {
-        autoModal.style.display = "flex";
-        
-      }
-    }
-    }, 4000);
-  });
+   // Auto open modal if not submitted today
+  const modal = document.getElementById("pdfFormModal");
+ 
+ const isModalHidden = modal && window.getComputedStyle(modal).display === "none";
+
+  if ((modal && isModalHidden || !modal) && !hasSubmittedAutoToday()) {
+    autoModal.style.display = "flex";
+  }
 
   // Close modal
-  autoCloseBtn.addEventListener("click", () => {
-    autoModal.style.display = "none";
-  });
+  if (autoCloseBtn) {
+    autoCloseBtn.addEventListener("click", () => {
+      autoModal.style.display = "none";
+    });
+  }
 
-  // Close modal if click outside the box
+  // Close modal if click outside
   window.addEventListener("click", (e) => {
     if (e.target === autoModal) {
       autoModal.style.display = "none";
@@ -49,66 +48,74 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // Form submission
-  autoForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+  if (autoForm) {
+    autoForm.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-    const name = document.getElementById("autoName").value.trim();
-    const email = document.getElementById("autoEmail").value.trim();
-    const phone = document.getElementById("autoPhone").value.trim();
+      const name = document.getElementById("autoName").value.trim();
+      const email = document.getElementById("autoEmail").value.trim();
+      const phone = document.getElementById("autoPhone").value.trim();
 
-    const namePattern = /^[A-Za-z\s]+$/;
-    const phonePattern = /^[6-9][0-9]{9}$/;
-    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      const namePattern = /^[A-Za-z\s]+$/;
+      const phonePattern = /^[6-9][0-9]{9}$/;
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
-    if (!name.match(namePattern) || name.length < 3) {
-      alert("Please enter a valid full name (letters only).");
-      return;
-    }
+      if (!name.match(namePattern) || name.length < 3) {
+        alert("Please enter a valid full name (letters only).");
+        return;
+      }
 
-    if (!phone.match(phonePattern)) {
-      alert("Please enter a valid 10-digit phone number");
-      return;
-    }
+      if (!phone.match(phonePattern)) {
+        alert("Please enter a valid 10-digit phone number");
+        return;
+      }
 
-    if (!email.match(emailPattern)) {
-      alert("Please enter a valid email address.");
-      return;
-    }
+      if (!email.match(emailPattern)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
 
-    document.getElementById("loader").style.display = "flex";
+      if (loader) loader.style.display = "flex";
 
-    const loaderText = loader.querySelector(".loader-content");
-    loaderText.textContent = "🛍️  Your visit means a lot! Check out our premium products and enjoy browsing…"; // show loader if exists
+      const loaderText = loader?.querySelector(".loader-content");
+      if (loaderText) {
+        loaderText.textContent =
+          "🛍️  Your visit means a lot! Check out our premium products and enjoy browsing…";
+      }
 
-    // ✅ Send to Google Sheets (adjust sheet name if needed)
-    fetch("https://script.google.com/macros/s/AKfycbz8SJRBA73R77PFd4JM-IkFE_YExR5GzQ3tH-n_ssRM3ur2dAZE2naMqD_BkJOKC3Pq/exec", {
-      method: "POST",
-      body: JSON.stringify({
-        name,
-        email,
-        phone,
-        sheetName: "product-seen-clients" // 👈 NEW sheet tab
-      })
-    })
-    .then(response => {
-      localStorage.setItem("pdfFormSubmitTime", new Date().getTime());
-
-      autoModal.style.display = "none";
-      document.getElementById("loader").style.display = "none"; // hide loader
-      autoForm.reset();
-    })
-    .catch(err => {
-      console.error("Error:", err);
-      document.getElementById("loader").style.display = "none"; // hide loader
-      alert("Something went wrong. Please try again.");
+      fetch(
+        "https://script.google.com/macros/s/AKfycbz8SJRBA73R77PFd4JM-IkFE_YExR5GzQ3tH-n_ssRM3ur2dAZE2naMqD_BkJOKC3Pq/exec",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            name,
+            email,
+            phone,
+            sheetName: "product-seen-clients",
+          }),
+        }
+      )
+        .then((response) => {
+          localStorage.setItem("pdfFormSubmitTime", new Date().getTime());
+          autoModal.style.display = "none";
+          if (loader) loader.style.display = "none";
+          autoForm.reset();
+        })
+        .catch((err) => {
+          console.error("Error:", err);
+          if (loader) loader.style.display = "none";
+          alert("Something went wrong. Please try again.");
+        });
     });
-  });
+  }
+}, 4000); // 4 sec delay
 
 
 
   
     const header = document.querySelector('.header');
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    
     const navMenu = document.querySelector('.nav-menu');
     const navItems = document.querySelectorAll('.nav-item');
     const navLinks = document.querySelectorAll('.nav-link');

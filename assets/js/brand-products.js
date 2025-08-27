@@ -1,9 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-
-
-  const modal = document.getElementById("pdfFormModal");
-  const closeBtn = document.getElementById("closeForm");
-  const form = document.getElementById("pdfForm");
+document.addEventListener("DOMContentLoaded", () => {
   let currentPdf = null;
 
   // Check if user already submitted today
@@ -13,99 +8,95 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const now = new Date().getTime();
     const oneDay = 24 * 60 * 60 * 1000; // 24 hours in ms
-
     return now - parseInt(lastSubmit, 10) < oneDay;
   }
 
-  // Attach click to PDF buttons
+  // Attach click to all PDF buttons
   document.querySelectorAll(".pdfBtn").forEach(btn => {
     btn.addEventListener("click", e => {
       e.preventDefault();
       currentPdf = btn.dataset.pdf;
 
+      // If already submitted today → open PDF directly
       if (hasSubmittedToday()) {
-        // ✅ Already submitted today → open directly
         window.open(currentPdf, "_blank");
-      } else {
-        // ❌ Not submitted yet → show form
-        modal.style.display = "flex";
+        return;
       }
+
+      // Else → show modal if exists
+      const modal = document.getElementById("pdfFormModal");
+      const form = document.getElementById("pdfForm");
+      const closeBtn = document.getElementById("closeForm");
+
+      if (!modal || !form || !closeBtn) {
+        console.warn("PDF modal elements not found on this page.");
+        return;
+      }
+
+      modal.style.display = "flex";
+
+      // Attach close button event (once)
+      closeBtn.onclick = () => {
+        modal.style.display = "none";
+      };
+
+      // Attach form submit event (once)
+      form.onsubmit = function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+
+        // Patterns
+        const namePattern = /^[A-Za-z\s]+$/;
+        const phonePattern = /^[6-9][0-9]{9}$/;
+        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+        if (!name.match(namePattern) || name.length < 3) {
+          alert("Please enter a valid full name (letters only).");
+          return;
+        }
+
+        if (!phone.match(phonePattern)) {
+          alert("Please enter a valid 10-digit phone number");
+          return;
+        }
+
+        if (email.length > 0 && !email.match(emailPattern)) {
+          alert("Please enter a valid email address.");
+          return;
+        }
+
+        document.getElementById("loader").style.display = "flex";
+
+        // Send to FormSubmit
+        fetch("https://script.google.com/macros/s/AKfycbz8SJRBA73R77PFd4JM-IkFE_YExR5GzQ3tH-n_ssRM3ur2dAZE2naMqD_BkJOKC3Pq/exec", {
+          method: "POST",
+          body: JSON.stringify({
+            name,
+            email,
+            phone,
+            sheetName: "product-seen-clients"
+          })
+        })
+        .then(res => res.text())
+        .then(() => {
+          localStorage.setItem("pdfFormSubmitTime", new Date().getTime());
+          if (currentPdf) window.open(currentPdf, "_blank");
+          modal.style.display = "none";
+          document.getElementById("loader").style.display = "none";
+          form.reset();
+        })
+        .catch(err => {
+          console.error(err);
+          document.getElementById("loader").style.display = "none";
+          alert("Something went wrong. Please try again.");
+        });
+      };
     });
   });
 
-  // Close modal
-  closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
-
-  // Form validation + FormSubmit + PDF open
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-
-    // Patterns
-    const namePattern = /^[A-Za-z\s]+$/;           // Only letters and spaces
-    const phonePattern = /^[6-9][0-9]{9}$/;        // 10 digits starting with 6-9
-    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/; // Basic email format
-
-    // Validate name
-    if (!name.match(namePattern) || name.length < 3) {
-      alert("Please enter a valid full name (letters only).");
-      return;
-    }
-
-    // Validate phone
-    if (!phone.match(phonePattern)) {
-      alert("Please enter a valid 10-digit phone number");
-      return;
-    }
-
-    // Validate email only if entered
-    if (email.length > 0 && !email.match(emailPattern)) {
-      alert("Please enter a valid email address.");
-      return;
-    }
-
-    document.getElementById("loader").style.display = "flex"; // show
-
-
-    // ✅ Send to FormSubmit
-    fetch("https://script.google.com/macros/s/AKfycbz8SJRBA73R77PFd4JM-IkFE_YExR5GzQ3tH-n_ssRM3ur2dAZE2naMqD_BkJOKC3Pq/exec", {
-      method: "POST",
-      body: JSON.stringify({
-        name,
-        email,
-        phone,
-        sheetName: "product-seen-clients"   // 👈 specify which sheet
-      })
-    })
-      .then(res => res.text())
-      .then(response => {
-        localStorage.setItem("pdfFormSubmitTime", new Date().getTime());
-
-        if (currentPdf) {
-          window.open(currentPdf, "_blank");
-        }
-
-        modal.style.display = "none";
-        document.getElementById("loader").style.display = "none"; // show
-
-        form.reset();
-      })
-      .catch(err => {
-        console.error("Error:", err);
-        document.getElementById("loader").style.display = "none"; // show
-
-        alert("Something went wrong. Please try again.");
-      });
-
-
-
-
-  });
 
 
   // Intersection Observer for reveal animations and product categories
