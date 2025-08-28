@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // WhatsApp pre-filled message
   const phone = "919063021489";
-  const message = "Hello! I want to inquire about your services.";
+  const message =  "Hi! ARCHEDGE.%0AI am interested in getting more information regarding your services.";
   const whatsappLink = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
   whatsappButton.addEventListener('click', () => {

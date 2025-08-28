@@ -563,6 +563,7 @@ a {
 @media (max-width: 480px) {
 
     .brands-dropdown {
+        
         max-width: 100%;
         display: none;
     }
@@ -577,7 +578,7 @@ a {
 
     
     .brands-row {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         margin: 0 auto;
         gap: 10px;
     }
