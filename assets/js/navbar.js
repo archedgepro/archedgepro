@@ -24,19 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
     animation: pulse 2s infinite;
   `;
 
-  // Create small blinking chat dot
-  const chatDot = document.createElement('span');
-  chatDot.style.cssText = `
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 12px;
-    height: 12px;
-    background: #FF3B30;
-    border-radius: 50%;
-    animation: blink 1s infinite;
-  `;
-  whatsappButton.appendChild(chatDot);
+ 
 
   // WhatsApp pre-filled message
   const phone = "919063021489";
@@ -57,20 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
     whatsappButton.style.transform = 'scale(1)';
   });
 
-  // Add keyframes for pulse and blink dynamically
-  const style = document.createElement('style');
-  style.innerHTML = `
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
-    }
-    @keyframes blink {
-      0%, 50%, 100% { opacity: 1; }
-      25%, 75% { opacity: 0; }
-    }
-  `;
-  document.head.appendChild(style);
+
 
   // Back to top button
   const backToTopButton = document.createElement('button');
