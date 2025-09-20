@@ -58,7 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Validate phone
-    if (!phone.match(phonePattern)) {
+    const repeatPattern = /(.)\1{5,}/;
+    if (!phone.match(phonePattern) || repeatPattern.test(phone)) {
       alert("Please enter a valid 10-digit phone number");
       return;
     }

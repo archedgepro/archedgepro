@@ -58,10 +58,11 @@ document.addEventListener("DOMContentLoaded", () => {
           return;
         }
 
-        if (!phone.match(phonePattern)) {
-          alert("Please enter a valid 10-digit phone number");
-          return;
-        }
+        const repeatPattern = /(.)\1{5,}/;
+    if (!phone.match(phonePattern) || repeatPattern.test(phone)) {
+      alert("Please enter a valid 10-digit phone number");
+      return;
+    }
 
         if (email.length > 0 && !email.match(emailPattern)) {
           alert("Please enter a valid email address.");

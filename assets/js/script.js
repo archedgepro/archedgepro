@@ -204,16 +204,19 @@ document.addEventListener('DOMContentLoaded', function () {
     const namePattern = /^[A-Za-z\s]+$/;
     const phonePattern = /^[6-9][0-9]{9}$/;
     const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    
 
     if (!name.match(namePattern) || name.length < 3) {
       alert("Please enter a valid full name (letters only).");
       return;
     }
 
-    if (!phone.match(phonePattern)) {
+    const repeatPattern = /(.)\1{5,}/;
+    if (!phone.match(phonePattern) || repeatPattern.test(phone)) {
       alert("Please enter a valid 10-digit phone number");
       return;
     }
+    
 
     if (!email.match(emailPattern)) {
       alert("Please enter a valid email address.");
@@ -297,13 +300,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const namePattern = /^[A-Za-z\s]+$/;
     const phonePattern = /^[6-9][0-9]{9}$/;
     const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    const repeatPattern = /(.)\1{5,}/;
 
     if (!name.match(namePattern) || name.length < 3) {
       alert("Please enter a valid full name (letters only).");
       return;
     }
 
-    if (!phone.match(phonePattern)) {
+    if (!phone.match(phonePattern) || repeatPattern.test(phone)) {
       alert("Please enter a valid 10-digit phone number");
       return;
     }
