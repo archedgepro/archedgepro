@@ -349,6 +349,7 @@ body {
 .product-category-content .btn:hover {
     color: #ffffff;
     border-color: #3b82f6;
+    cursor: pointer;
 }
 
 /* ============================= */

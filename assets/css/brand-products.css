@@ -508,6 +508,7 @@
   .product-category-content .btn:hover {
     color: #ffffff;
     border-color: #3b82f6;
+    cursor: pointer;
   }
 
   /* Initial state for all animating elements */

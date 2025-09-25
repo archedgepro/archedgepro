@@ -327,7 +327,7 @@ document.addEventListener('DOMContentLoaded', function () {
         name,
         email,
         phone,
-        sheetName: "product-seen-clients" // 👈 must match tab name
+        sheetName: "product-seen-clients" 
       })
     })
 
@@ -339,7 +339,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         modal.style.display = "none";
-        document.getElementById("loader").style.display = "none"; // show
+        document.getElementById("loader").style.display = "none"; 
 
         form.reset();
       })

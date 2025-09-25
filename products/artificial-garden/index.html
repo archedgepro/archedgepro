@@ -254,7 +254,7 @@
                         <span class="view-products-text">View Products</span>
                       </div>
                     </div>
-                    <div class="brand-name"> Artificial Vertical Garden </div>
+                    <div class="brand-name"> Garden Hub </div>
                   </a>
 
                   <a href="../cane-webbing/" class="brand-item">
@@ -394,7 +394,7 @@
 
     <!-- Hero Content with Parallax -->
     <div class="hero-content" data-speed="0.1">
-      <h1 class="hero-title" data-text="Artificial Vertical   Gardens">
+      <h1 class="hero-title" data-text=" Garden     Hub">
         Artificial Vertical Garden
       </h1>
 
@@ -405,26 +405,56 @@
   </section>
 
 
-   <main class="main-content">
-        <!-- Product Grid -->
-        <section class="products-grid" id="products">
+  <main class="main-content">
+    <!-- Product Grid -->
+    <section class="products-grid" id="products">
 
-  <div class="product-category">
-    <div class="product-image">
-      <img src="../../assets/images/brands/artificial-garden/garden-hub.png"
-        alt="Vox Welo Wall Panels - Seamless Modern Interior Design Panels" loading="lazy">
-    </div>
-    <div class="product-category-content">
-      <h2>Garden Hub</h2>
-      <h5>Brand : <span>Artificial Vertical Garden</span></h5>
+      <div class="product-category">
+        <div class="product-image">
+          <img src="../../assets/images/brands/artificial-garden/garden-hub.png"
+            alt="Vox Welo Wall Panels - Seamless Modern Interior Design Panels" loading="lazy">
+        </div>
+        <div class="product-category-content">
+          <h2>Garden Hub</h2>
           <p>Bring the beauty of nature into your home with rich, lifelike greenery.
-             Refreshing atmosphere that makes any space feel more alive and inviting.</p>
-      <button class="btn pdfBtn" aria-label="Download Vox Welo Wall Panels catalog"
-        data-pdf="../../assets/pdfs/ARCHEDGE-GARDEN HUB PREMIUM WALL TILES.pdf">Explore →</button>
-    </div>
-  </div>
-  
-  </section>
+            Refreshing atmosphere that makes any space feel more alive and inviting.</p>
+          <button class="btn pdfBtn" aria-label="Download Vox Welo Wall Panels catalog"
+            data-pdf="../../assets/pdfs/ARCHEDGE-GARDEN HUB PREMIUM WALL TILES.pdf">Explore →</button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Hidden form modal -->
+        <div id="pdfFormModal" class="modal-overlay">
+            <div class="modal-box">
+                <span id="closeForm" class="close-btn">&times;</span>
+                <h2 class="form-title">Access the Catalog</h2>
+                <p class="form-subtitle">Please fill in your details to explore the collection</p>
+
+                <form id="pdfForm" method="post">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" maxlength="10"
+                            required>
+                    </div>
+
+                    <button type="submit" class="s-btn">Open Catalog</button>
+                </form>
+            </div>
+        </div>
+
+
   </main>
 
 
