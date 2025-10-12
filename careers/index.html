@@ -592,7 +592,6 @@
             const highestEdu = form.highestEdu.value.trim();
             const skills = form.skills.value.trim();
             const coverLetter = form.coverLetter.value.trim();
-            const resume = form.resume.files[0];
             
 
             // Validation patterns
@@ -647,16 +646,48 @@
                 return;
             }
 
-            if (!resume) {
-                showError(form.resume, "Please upload your resume.");
-                return;
-            } else {
-                const allowedExt = /(\.pdf)$/i;
-                if (!allowedExt.exec(resume.name)) {
-                    showError(form.resume, "Resume must be a PDF  file only.");
-                    return;
-                }
-            }
+           
+            const resumeInput = document.getElementById("resume");
+
+    const file = resumeInput.files[0];
+
+    if (!file) {
+      alert("Please select a PDF file.");
+      return;
+    }
+    if (!file.name.toLowerCase().endsWith(".pdf")) {
+      alert("Only PDF files are allowed.");
+      return;
+    }
+
+    // Create FormData and append the file
+    const formResume = new FormData();
+    formResume.append("resume", file); // name must match Apps Script key
+
+    console.log("📤 Uploading file:", file.name);
+
+    try {
+      const res = await fetch('https://script.google.com/macros/s/AKfycbzvqDf1gWkESqXOD8R2r0kyVtd0RzRKxemzAFPq0TNZJxUzpRarn9jHET7h0UW_353D_g/exec', {
+        method: "POST",
+        body: file, // automatically sets correct headers
+      });
+
+      // Parse JSON response
+      const data = await res.json();
+      console.log("📩 Response:", data);
+
+      if (data.success) {
+        alert("✅ Uploaded successfully!\n" + data.link);
+        console.log("✅ File uploaded:", data.link);
+      } else {
+        alert("❌ Upload failed: " + data.error);
+        console.error("Upload failed:", data.error);
+      }
+    } catch (err) {
+      alert("⚠️ Error uploading resume: " + err.message);
+      console.error("Fetch error:", err);
+    }
+
 
             const formData = new FormData();
             formData.append("fullName", fullName);
