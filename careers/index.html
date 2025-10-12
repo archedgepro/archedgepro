@@ -64,8 +64,8 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../assets/css/navbar.css">
     <link rel="stylesheet" href="../assets/css/careers.css">
-    
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
     <!-- Enhanced SEO Meta Tags -->
     <meta name="author" content="Archedge – Architects & Interiors Park">
@@ -355,38 +355,39 @@
         </div>
     </header>
 
-    
-<!-- Auto Popup Modal -->
-<!-- Modal Overlay -->
-<div id="autoFormModal" class="auto-modal-overlay">
-  <div class="auto-modal-box">
-    <span id="closeAutoForm" class="auto-close-btn">&times;</span>
-    <h3 class="auto-form-title">Let's Get In Touch</h3>
-    <p class="auto-form-subtitle">Fill in your details and we’ll reach out soon</p>
 
-    <form id="autoForm" method="post">
-      
-      <div class="auto-form-group">
-        <label for="autoName">Name <span class="auto-req">*</span></label>
-        <input type="text" id="autoName" name="auto_name" placeholder="Enter your full name" required>
-      </div>
+    <!-- Auto Popup Modal -->
+    <!-- Modal Overlay -->
+    <div id="autoFormModal" class="auto-modal-overlay">
+        <div class="auto-modal-box">
+            <span id="closeAutoForm" class="auto-close-btn">&times;</span>
+            <h3 class="auto-form-title">Let's Get In Touch</h3>
+            <p class="auto-form-subtitle">Fill in your details and we’ll reach out soon</p>
 
-      <div class="auto-form-group">
-        <label for="autoPhone">Phone <span class="auto-req">*</span></label>
-        <input type="tel" id="autoPhone" name="auto_phone" placeholder="Enter your phone number" maxlength="10" required>
-      </div>
+            <form id="autoForm" method="post">
 
-      <div class="auto-form-group">
-        <label for="autoEmail">Email <span class="auto-req">*</span></label>
-        <input type="email" id="autoEmail" name="auto_email" placeholder="Enter your email" required>
-      </div>
+                <div class="auto-form-group">
+                    <label for="autoName">Name <span class="auto-req">*</span></label>
+                    <input type="text" id="autoName" name="auto_name" placeholder="Enter your full name" required>
+                </div>
 
-     
+                <div class="auto-form-group">
+                    <label for="autoPhone">Phone <span class="auto-req">*</span></label>
+                    <input type="tel" id="autoPhone" name="auto_phone" placeholder="Enter your phone number"
+                        maxlength="10" required>
+                </div>
 
-      <button type="submit" class="auto-s-btn">Submit</button>
-    </form>
-  </div>
-</div>
+                <div class="auto-form-group">
+                    <label for="autoEmail">Email <span class="auto-req">*</span></label>
+                    <input type="email" id="autoEmail" name="auto_email" placeholder="Enter your email" required>
+                </div>
+
+
+
+                <button type="submit" class="auto-s-btn">Submit</button>
+            </form>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero-section">
@@ -403,7 +404,7 @@
         <div class="form-card">
             <h2>Apply for a Job</h2>
 
-            <form id="jobApplicationForm"  method="POST"  enctype="multipart/form-data">
+            <form id="jobApplicationForm" method="POST" enctype="multipart/form-data">
 
                 <!-- Personal Info -->
                 <div class="form-group">
@@ -456,10 +457,10 @@
                         placeholder="Write a short note about your motivation" required></textarea>
                 </div>
 
-                <!-- Upload -->
+                <!-- Upload Resume URL -->
                 <div class="form-group">
-                    <label for="resume">Upload Resume (PDF) *</label>
-                    <input type="file" id="resume" name="resume" accept=".pdf" required>
+                    <label for="resume">Resume Link *</label>
+                    <input type="url" id="resume" name="resume" placeholder="Enter your resume URL" required>
                 </div>
 
 
@@ -518,12 +519,13 @@
 
             <div class="footer-column">
                 <h4>Contact Info</h4>
-                <p>Have a project in mind? Let's talk :<br> <a href="mailto:archedgepro@gmail.com">archedgepro@gmail.com</a>
+                <p>Have a project in mind? Let's talk :<br> <a
+                        href="mailto:archedgepro@gmail.com">archedgepro@gmail.com</a>
                 </p>
                 <p><strong>Phone:</strong></p>
-        <p> <a href="tel:+9199495 64848">+91 99495 64848</a></p>
-        <p><a href="tel:+919121188172">+91 91211 88172</a></p>
-        <p><a href="tel:+919063021489">+91 90630 21489</a></p>
+                <p> <a href="tel:+9199495 64848">+91 99495 64848</a></p>
+                <p><a href="tel:+919121188172">+91 91211 88172</a></p>
+                <p><a href="tel:+919063021489">+91 90630 21489</a></p>
             </div>
 
             <div class="footer-column">
@@ -565,7 +567,7 @@
 
     <script src="../assets/js/navbar.js" defer></script>
     <script>
-        document.getElementById("jobApplicationForm").addEventListener("submit",async function (e) {
+        document.getElementById("jobApplicationForm").addEventListener("submit", async function (e) {
             e.preventDefault(); // Prevent default form submission
             const form = e.target;
 
@@ -592,14 +594,18 @@
             const highestEdu = form.highestEdu.value.trim();
             const skills = form.skills.value.trim();
             const coverLetter = form.coverLetter.value.trim();
-            
+            const resumeInput = form.resume.value.trim();
+
 
             // Validation patterns
             const namePattern = /^[A-Za-z ]+$/;
             const cityPattern = /^[A-Za-z ]+$/;
             const jobPattern = /^[A-Za-z ]+$/;
             const skillsPattern = /^[A-Za-z, ]+$/;
-
+            if (!resumeInput ) {
+                showError(form.resume, "Enter a valid resume URL ");
+                return;
+            }
             // Validate fields one by one
             if (!fullName || !namePattern.test(fullName)) {
                 showError(form.fullName, "Enter a valid name (letters and spaces only).");
@@ -646,36 +652,6 @@
                 return;
             }
 
-           
-            const resumeInput = document.getElementById("resume");
-
-    const file = resumeInput.files[0];
-
-    if (!file) {
-      alert("Please select a PDF file.");
-      return;
-    }
-    if (!file.name.toLowerCase().endsWith(".pdf")) {
-      alert("Only PDF files are allowed.");
-      return;
-    }
-
-const formR = new FormData();
-formR.append("resume", file);
-
-try {
-  const response = await fetch("https://script.google.com/macros/s/AKfycbyP8h1morSeY-bELId-xECvtjxenHwocpEjxv6shmF1ce0LEOvd5sbFn_hBFsRpFeiVzg/exec", {
-    method: "POST",
-    body: formR,
-  });
-  const data = await response.json();
-  console.log(data);
-} catch (err) {
-  console.error("Upload failed:", err);
-}
-
-
-
             const formData = new FormData();
             formData.append("fullName", fullName);
             formData.append("email", email);
@@ -686,20 +662,23 @@ try {
             formData.append("highestEdu", highestEdu);
             formData.append("skills", skills);
             formData.append("coverLetter", coverLetter);
+            formData.append("resume", resumeInput);
+
+
             formData.append("sheetName", "job");
 
             document.getElementById("loader").style.display = "flex"; // show
 
 
-            fetch("https://script.google.com/macros/s/AKfycbzYnt1KbABGTNw7JaKXG1swZYH8EoPEiZupq9QZuE8Ee87eXBsWqiY8N1h973Hdjck5RA/exec", {
+            fetch("https://script.google.com/macros/s/AKfycbz2NpzP-h3swLq_7ot07MlD4PzW9vS-TCgWvokHzQTY4K_4omevO78I-3ojyY_LEXIz1A/exec", {
                 method: "POST",
                 body: formData
             })
                 .then(res => res.json())
                 .then(response => {
-                        
-                        window.location.href = "./applied-successfully"; // redirect
-                    
+
+                    window.location.href = "./applied-successfully"; // redirect
+
                 })
                 .catch(err => {
                     document.getElementById("loader").style.display = "none"; // show
@@ -784,7 +763,7 @@ try {
     </script>
 
     <!-- Full-page Animated Loader -->
-<div id="loader" style="
+    <div id="loader" style="
     display:none;
     position:fixed;
     top:0;
@@ -800,8 +779,8 @@ try {
     font-family: 'Inter', sans-serif;
     font-weight:bold;
 ">
-    <!-- Spinner -->
-    <div style="
+        <!-- Spinner -->
+        <div style="
         border: 6px solid rgba(255,255,255,0.3);
         border-top: 6px solid #fff;
         border-radius: 50%;
@@ -811,17 +790,22 @@ try {
         margin-bottom: 20px;
     "></div>
 
-    <!-- Text -->
-    <div class="loader-content" style="font-size:18px;">Sending your Message, please wait...</div>
-</div>
+        <!-- Text -->
+        <div class="loader-content" style="font-size:18px;">Sending your Message, please wait...</div>
+    </div>
 
-<!-- Spinner Animation -->
-<style>
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-</style>
+    <!-- Spinner Animation -->
+    <style>
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 
 
 
