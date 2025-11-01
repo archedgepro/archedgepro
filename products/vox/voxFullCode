@@ -5,57 +5,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Artificial Vertical Garden Page Title & Description -->
-  <title>Artificial Vertical Garden | Premium Green Walls & Interior Solutions | Archedge Hyderabad</title>
+  <!-- Vox Page Title & Description -->
+  <title>Vox Decorative Panels & Interior Solutions in Hyderabad | Archedge</title>
   <meta name="description"
-    content="Enhance interiors & exteriors with Artificial Vertical Gardens in Hyderabad. Premium, lush, low-maintenance green walls with professional installation by Archedge." />
+    content="Explore Vox decorative panels and interior solutions by Archedge in Hyderabad. High-quality, modern wall panels, ceilings, and flooring for homes and offices with expert installation.">
   <meta name="keywords"
-    content="Artificial Vertical Garden, Vertical Garden, Artificial Green Walls, Decorative Garden Panels, Indoor Vertical Garden, Outdoor Artificial Vertical Garden, Archedge Hyderabad, Artificial Plants, Premium Green Interiors, biophilic design, sustainable interiors, low-maintenance greenery, modern wall decor, eco-friendly home decor, living wall panels, vertical landscaping, artificial foliage, green architecture, urban gardening, indoor plant alternatives" />
-  <meta name="author" content="Archedge – Architects & Interiors Park" />
-  <meta name="robots" content="index, follow" />
+    content="Vox panels, Vox decorative panels, modern wall panels, designer interior solutions, premium ceilings, flooring solutions, residential interior panels, office wall panels, Archedge Vox, specialty interior products, Vox wall panels Hyderabad, decorative wall panels, interior wall panels, modern interior panels, premium wall panels, designer wall panels, office interior panels, residential wall panels, Vox India panels, wall cladding solutions, interior design panels, architectural panels, Hyderabad interior solutions, wall panel installation, custom wall panels, luxury interior panels, waterproof wall panels, fire-retardant panels, SPC flooring Hyderabad, facade panels, soffit panels, louver panels, exterior cladding, interior cladding, ceiling panels Hyderabad, wall panels installation, decorative ceiling panels, modern facade panels, waterproof flooring, durable wall panels, eco-friendly panels, PVC panels Hyderabad, WPC panels Hyderabad, baffle ceiling panels, acoustic panels, ceiling panels Hyderabad, stone polymer composite flooring, three-layer facade panels, wood-inspired louvers, seamless wall panels, infratop soffit panels, linerio wall panels, welo wall panels, max 3 facade, fronto louvers, exterior wall panels, interior ceiling panels, Hyderabad wall cladding, premium interior design, modern home decor, office interior solutions, architectural wall solutions, custom facade panels, waterproof cladding, fire-resistant panels, antibacterial panels, termite-proof panels, lightweight panels, easy installation panels, Archedge interior products, Vox Hyderabad distributor, decorative facade panels, ceiling soffit panels, flooring installation Hyderabad">
+  <meta name="author" content="Archedge – Architects & Interiors Park">
+  <meta name="robots" content="index, follow">
 
   <!-- Canonical -->
-  <link rel="canonical" href="https://archedge.pro/products/artificial-garden/" />
+  <link rel="canonical" href="https://archedge.pro/products/vox/" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
-  <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" />
-  <link rel="manifest" href="/assets/images/manifest.json" />
-  <meta name="theme-color" content="#1a1a1a" />
-  <meta name="msapplication-TileColor" content="#1a1a1a" />
-  <meta name="msapplication-TileImage" content="/assets/images/mstile-150x150.png" />
-  <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#1a1a1a" />
-
-  <!-- Open Graph -->
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://archedge.pro/products/artificial-garden/" />
-  <meta property="og:title" content="Artificial Vertical Garden - Premium Green Walls & Interiors" />
+  <meta property="og:url" content="https://archedge.pro/products/vox/" />
+  <meta property="og:title" content="Vox Decorative Panels - Premium Interior Solutions by Archedge" />
   <meta property="og:description"
-    content="Bring nature indoors with Artificial Vertical Gardens by Archedge. Premium quality, lush greenery, and low-maintenance wall panels in Hyderabad." />
-  <meta property="og:image"
-    content="https://archedge.pro/assets/images/brands/artificial-garden/Artificial Vertical Garden.jpg" />
+    content="Transform your space with premium Vox decorative panels. High-quality materials for modern interiors in Hyderabad." />
+  <meta property="og:image" content="https://archedge.pro/assets/images/og.png" />
   <meta property="og:site_name" content="Archedge – Architects & Interiors Park" />
   <meta property="og:locale:alternate" content="en_US" />
   <meta property="og:locale:alternate" content="en_GB" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://archedge.pro/products/artificial-garden/" />
-  <meta name="twitter:title" content="Artificial Vertical Garden - Premium Green Walls | Archedge Hyderabad" />
+  <meta name="twitter:url" content="https://archedge.pro/products/vox/" />
+  <meta name="twitter:title" content="Vox Decorative Panels - Modern Interior Design Solutions" />
   <meta name="twitter:description"
-    content="Premium Artificial Vertical Gardens and Green Walls for modern interiors & exteriors. Available in Hyderabad with expert installation." />
-  <meta name="twitter:image"
-    content="https://archedge.pro/assets/images/brands/artificial-garden/Artificial Vertical Garden.jpg" />
+    content="Premium Vox panels for contemporary interiors. Available in Hyderabad with expert installation." />
+  <meta name="twitter:image" content="https://archedge.pro/assets/images/og.png" />
   <meta name="twitter:site" content="@archedgeinteriors" />
   <meta name="twitter:creator" content="@archedgeinteriors" />
 
   <!-- Enhanced SEO Meta Tags -->
   <meta name="publisher" content="Archedge – Architects & Interiors Park" />
   <meta name="classification"
-    content="Artificial Vertical Garden, Vertical Green Walls, Decorative Wall Panels, Interior Design, Artificial Plants" />
+    content="Interior Design, Decorative Wall Panels, Ceiling Systems, Waterproof Flooring, PVC Panels, WPC Panels" />
   <meta name="geo.region" content="IN-TG" />
   <meta name="geo.placename" content="Hyderabad" />
   <meta name="geo.position" content="17.4065;78.4772" />
@@ -64,20 +50,49 @@
   <meta name="language" content="EN" />
   <meta name="distribution" content="global" />
   <meta name="rating" content="general" />
+  <meta name="theme-color" content="#1a1a1a" />
+  <meta name="msapplication-TileColor" content="#1a1a1a" />
+  <meta name="msapplication-TileImage" content="../../assets/images/logo.png" />
+
+
+
+  <!-- Standard Favicon -->
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+  <!-- PNG Icons for Modern Browsers -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+
+  <!-- Apple iOS Touch Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+
+  <!-- Android / PWA -->
+  <link rel="manifest" href="/assets/images/manifest.json">
+  <meta name="theme-color" content="#1a1a1a">
+
+  <!-- Windows Tiles -->
+  <meta name="msapplication-TileColor" content="#1a1a1a">
+  <meta name="msapplication-TileImage" content="/assets/images/mstile-150x150.png">
+
+  <!-- Safari Pinned Tab (macOS/iOS Safari) -->
+  <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#1a1a1a">
+
+
 
   <!-- CSS & Fonts -->
   <link rel="stylesheet" href="../../assets/css/navbar.css" />
   <link rel="stylesheet" href="../../assets/css/brand-products.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Google Analytics -->
+  <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-M53RF9HY7P"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
-    gtag("js", new Date());
-    gtag("config", "G-M53RF9HY7P");
+    gtag('js', new Date());
+    gtag('config', 'G-M53RF9HY7P');
   </script>
 
   <!-- Microsoft Clarity -->
@@ -93,11 +108,11 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": ["Product", "HomeAndConstructionBusiness", "LocalBusiness"],
-    "name": "Artificial Vertical Garden",
-    "description": "Premium Artificial Vertical Gardens with lush greenery for homes and offices. Low-maintenance, durable, and modern green wall solutions.",
-    "url": "https://archedge.pro/products/artificial-garden/",
-    "image": "https://archedge.pro/assets/images/brands/artificial-garden/Artificial Vertical Garden.jpg",
+    "@type": ["Product", "LocalBusiness", "HomeAndConstructionBusiness"],
+    "name": "Vox Decorative Panels",
+    "description": "Premium Vox decorative panels and interior solutions for modern interiors and exteriors in Hyderabad. Lightweight, durable, and easy to install.",
+    "url": "https://archedge.pro/products/vox/",
+    "image": "https://archedge.pro/assets/images/og.png",
     "logo": "https://archedge.pro/assets/images/logo.png",
     "telephone": "+91-91211-88172",
     "email": "archedgepro@gmail.com",
@@ -123,7 +138,7 @@
     "priceRange": "₹₹",
     "brand": {
       "@type": "Brand",
-      "name": "Artificial Vertical Garden"
+      "name": "Vox"
     },
     "foundingDate": "2025",
     "sameAs": [
@@ -145,28 +160,26 @@
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      {"@type": "ListItem","position":1,"name":"Home","item":"https://archedge.pro/"},
-      {"@type": "ListItem","position":2,"name":"Products","item":"https://archedge.pro/products/"},
-      {"@type": "ListItem","position":3,"name":"Artificial Vertical Garden","item":"https://archedge.pro/products/artificial-garden/"}
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://archedge.pro/"},
+      {"@type":"ListItem","position":2,"name":"Products","item":"https://archedge.pro/products/"},
+      {"@type":"ListItem","position":3,"name":"Vox","item":"https://archedge.pro/products/vox/"}
     ]
   }
   </script>
+
 </head>
-
-
 
 
 <body>
 
-  <!-- Scroll Progress Indicator -->
-  <div class="scroll-progress" id="scrollProgress"></div>
+  <h1 class="sr-only">Vox Decorative Panels & Interior Solutions in Hyderabad</h1>
+
 
   <!-- Header -->
   <header id="heroHeader" class="header">
     <div class="container">
       <nav class="navbar">
         <a href="../../"> <img src="../../assets/images/logo.png" alt="Archedge Logo" class="navbar-logo" /></a>
-
 
 
         <div class="nav-right">
@@ -201,7 +214,16 @@
                     <div class="brand-name">PARE </div>
                   </a>
 
-                  
+                  <a href="../vox/" class="brand-item">
+                    <div class="brand-image-container">
+                      <img src="../../assets/images/brands/vox/product.jpg" alt="Vox India" class="brand-image"
+                        loading="lazy">
+                      <div class="brand-overlay">
+                        <span class="view-products-text">View Products</span>
+                      </div>
+                    </div>
+                    <div class="brand-name">VOX</div>
+                  </a>
 
                   <a href="../stanza/" class="brand-item">
                     <div class="brand-image-container">
@@ -225,6 +247,7 @@
                     <div class="brand-name">SOL </div>
                   </a>
 
+                 
 
                   <a href="../future decore/" class="brand-item">
                     <div class="brand-image-container">
@@ -240,7 +263,7 @@
                   <a href="../stardec/" class="brand-item">
                     <div class="brand-image-container">
                       <img src="../../assets/images/brands/StarDECOR/product.jpeg" alt="Charcoal Louvers - Star Dec  "
-                        class="brand-image" loading="lazy">
+                        class="brand-image">
                       <div class="brand-overlay">
                         <span class="view-products-text">View Products</span>
                       </div>
@@ -250,8 +273,9 @@
 
                   <a href="../artificial-garden/" class="brand-item">
                     <div class="brand-image-container">
-                      <img src="../../assets/images/brands/artificial-garden/Artificial Vertical Garden.jpg"
-                        alt="Artificial Vertical Garden Products" class="brand-image" loading="lazy">
+                      <img src="../../assets/images/brands/artificial-garden/
+                      .jpg" alt="Artificial Vertical Garden Products"
+                        class="brand-image">
                       <div class="brand-overlay">
                         <span class="view-products-text">View Products</span>
                       </div>
@@ -262,13 +286,14 @@
                   <a href="../cane-webbing/" class="brand-item">
                     <div class="brand-image-container">
                       <img src="../../assets/images/brands/cane-webbing/Cane webbing.jpg" alt="Cane webbing Products"
-                        class="brand-image" loading="lazy">
+                        class="brand-image">
                       <div class="brand-overlay">
                         <span class="view-products-text">View Products</span>
                       </div>
                     </div>
                     <div class="brand-name"> Cane Webbing </div>
                   </a>
+
 
 
                 </div>
@@ -353,43 +378,41 @@
     </div>
   </header>
 
+  
+<!-- Auto Popup Modal -->
+<!-- Modal Overlay -->
+<div id="autoFormModal" class="auto-modal-overlay">
+  <div class="auto-modal-box">
+    <span id="closeAutoForm" class="auto-close-btn">&times;</span>
+    <h3 class="auto-form-title">Let's Get In Touch</h3>
+    <p class="auto-form-subtitle">Fill in your details and we’ll reach out soon</p>
 
+    <form id="autoForm" method="post">
+      
+      <div class="auto-form-group">
+        <label for="autoName">Name <span class="auto-req">*</span></label>
+        <input type="text" id="autoName" name="auto_name" placeholder="Enter your full name" required>
+      </div>
 
-  <!-- Auto Popup Modal -->
-  <!-- Modal Overlay -->
-  <div id="autoFormModal" class="auto-modal-overlay">
-    <div class="auto-modal-box">
-      <span id="closeAutoForm" class="auto-close-btn">&times;</span>
-      <h3 class="auto-form-title">Let's Get In Touch</h3>
-      <p class="auto-form-subtitle">Fill in your details and we’ll reach out soon</p>
+      <div class="auto-form-group">
+        <label for="autoPhone">Phone <span class="auto-req">*</span></label>
+        <input type="tel" id="autoPhone" name="auto_phone" placeholder="Enter your phone number" maxlength="10" required>
+      </div>
 
-      <form id="autoForm" method="post">
+      <div class="auto-form-group">
+        <label for="autoEmail">Email <span class="auto-req">*</span></label>
+        <input type="email" id="autoEmail" name="auto_email" placeholder="Enter your email" required>
+      </div>
 
-        <div class="auto-form-group">
-          <label for="autoName">Name <span class="auto-req">*</span></label>
-          <input type="text" id="autoName" name="auto_name" placeholder="Enter your full name" required>
-        </div>
+     
 
-        <div class="auto-form-group">
-          <label for="autoPhone">Phone <span class="auto-req">*</span></label>
-          <input type="tel" id="autoPhone" name="auto_phone" placeholder="Enter your phone number" maxlength="10"
-            required>
-        </div>
-
-        <div class="auto-form-group">
-          <label for="autoEmail">Email <span class="auto-req">*</span></label>
-          <input type="email" id="autoEmail" name="auto_email" placeholder="Enter your email" required>
-        </div>
-
-
-
-        <button type="submit" class="auto-s-btn">Submit</button>
-      </form>
-    </div>
+      <button type="submit" class="auto-s-btn">Submit</button>
+    </form>
   </div>
+</div>
+
   <!-- Hero Section -->
-  <section class="hero-section"
-    style="background:url('../../assets/images/brands/artificial-garden/cover.png') fixed no-repeat; background-size: cover; "
+  <section class="hero-section" style="background:url('../../assets/images/brands/vox/cover.jpg') no-repeat; background-size: cover;"
     id="heroSection">
     <!-- Parallax Background Layers -->
     <div class="parallax-container">
@@ -405,38 +428,12 @@
       <div class="float-element float-3" data-speed="0.4"></div>
     </div>
 
-    <!-- Hero Content with Parallax -->
-    <div class="hero-content" data-speed="0.1">
-      <h1 class="hero-title" data-text=" Garden     Hub">
-        Artificial Vertical Garden
-      </h1>
-
-
-    </div>
-
-
+    <img src="../../assets/images/brands/vox/vox-logo.svg" alt="Archedge VOX logo">
   </section>
 
 
   <main class="main-content">
-    <!-- Product Grid -->
-    <section class="products-grid" id="products">
 
-      <div class="product-category">
-        <div class="product-image">
-          <img src="../../assets/images/brands/artificial-garden/garden-hub.png"
-            alt="GARDEN HUB PREMIUM WALL TILES - Seamless Modern Interior Design" loading="lazy">
-        </div>
-        <div class="product-category-content">
-          <h2>Garden Hub</h2>
-          <p>Bring the beauty of nature into your home with rich, lifelike greenery.
-            Refreshing atmosphere that makes any space feel more alive and inviting.</p>
-          <button class="btn pdfBtn" aria-label="Download GARDEN HUB PREMIUM WALL TILES catalog"
-            data-pdf="../../assets/pdfs/ARCHEDGE-GARDEN HUB PREMIUM WALL TILES.pdf">Explore →</button>
-        </div>
-      </div>
-
-    </section>
 
     <!-- Hidden form modal -->
     <div id="pdfFormModal" class="modal-overlay">
@@ -467,9 +464,95 @@
     </div>
 
 
+    <!-- Product Grid -->
+    <section class="products-grid" id="products">
+      <!-- Decorative Wall Panels -->
+
+
+      <div class="product-category">
+        <div class="product-image">
+          <img src="../../assets/images/brands/vox/infratop.webp"
+            alt="Vox Soffit Infratop Panels - Waterproof, Seamless Exterior Ceiling Solution" loading="lazy">
+        </div>
+        <div class="product-category-content">
+          <h2>Soffit Infratop</h2>
+          <p>Waterproof, durable VOX soffit panels offering a modern ceiling finish.</p>
+
+          <button class="btn pdfBtn" aria-label="Download Vox Soffit Infratop Panels catalog"
+            data-pdf="../../assets/pdfs/ArchEdge-VOX_Infratop- Ceiling.pdf">
+            Explore →
+          </button>
+        </div>
+      </div>
+      <div class="product-category">
+        <div class="product-image">
+          <img src="../../assets/images/brands/vox/Linerio.png"
+            alt="Vox Linerio Wall Panels - Modern Decorative Wall Solution" loading="lazy">
+        </div>
+        <div class="product-category-content">
+          <h2>Walls - Linerio</h2>
+          <p>Decorative wall panels with stylish grooves for modern interiors.</p>
+          <button class="btn pdfBtn" aria-label="Download Vox Linerio Wall Panels catalog"
+            data-pdf="../../assets/pdfs/ArchEdge-VOX LINERIO PANELS.pdf">Explore →</button>
+        </div>
+      </div>
+
+      <div class="product-category">
+        <div class="product-image">
+          <img src="../../assets/images/brands/vox/welo.webp"
+            alt="Vox Welo Wall Panels - Seamless Modern Interior Design Panels" loading="lazy">
+        </div>
+        <div class="product-category-content">
+          <h2>Walls - Welo</h2>
+          <p>Seamless wall panels designed to enhance modern interiors.</p>
+          <button class="btn pdfBtn" aria-label="Download Vox Welo Wall Panels catalog"
+            data-pdf="../../assets/pdfs/ArchEdge-VOX WELO .pdf">Explore →</button>
+        </div>
+      </div>
+
+      <div class="product-category">
+        <div class="product-image">
+          <img src="../../assets/images/brands/vox/spc.webp"
+            alt="Vox SPC Flooring - Waterproof Stone Polymer Composite Flooring" loading="lazy">
+        </div>
+        <div class="product-category-content">
+          <h2>Flooring - SPC</h2>
+          <p>Durable SPC flooring offering waterproof and long-lasting style.</p>
+          <button class="btn pdfBtn" aria-label="Download Vox SPC Flooring catalog"
+            data-pdf="../../assets/pdfs/ArchEdge-VOX SPC Flooring.pdf">Explore →</button>
+        </div>
+      </div>
+
+      <div class="product-category">
+        <div class="product-image">
+          <img src="../../assets/images/brands/vox/max-3.jpeg"
+            alt="Vox Max 3 Facade Panels - Innovative Three-Layer Exterior Solution" loading="lazy">
+        </div>
+        <div class="product-category-content">
+          <h2>Facade - Max 3</h2>
+          <p>Three-layer facade panels offering durability and modern aesthetics.</p>
+          <button class="btn pdfBtn" aria-label="Download Vox Max 3 Facade Panels catalog"
+            data-pdf="../../assets/pdfs/ArchEdge-VOX MAX 3 Facade .pdf">Explore →</button>
+        </div>
+      </div>
+
+      <div class="product-category">
+        <div class="product-image">
+          <img src="../../assets/images/brands/vox/fronto.jpeg"
+            alt="Vox Fronto Louvers - Natural Wood-Style Facade and Ceiling Panels" loading="lazy">
+        </div>
+        <div class="product-category-content">
+          <h2>Facade - Fronto</h2>
+          <p>Wood-inspired facade louvers that add warmth and contemporary design.</p>
+          <button class="btn pdfBtn" aria-label="Download Vox Fronto Louvers catalog"
+            data-pdf="../../assets/pdfs/ArchEdge-VOX FRONTO.pdf">Explore →</button>
+        </div>
+      </div>
+
+    </section>
+
+
   </main>
-
-
 
   <!-- Footer -->
   <footer class="footer">
@@ -522,28 +605,28 @@
 
     <div class="footer-bottom">
       <div>
-        &copy; 2025 Archedge. All Rights Reserved.
-      </div>
-      <div class="social-media">
-
-        <a href="https://www.facebook.com/profile.php?id=61580297951336" target="_blank" aria-label="Facebook">
-          <i class="fa-brands fa-facebook-f"></i>
-        </a>
-        <a href="https://www.instagram.com/archedge_/" target="_blank" aria-label="Instagram">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://x.com/archedgepro" target="_blank" aria-label="X (Twitter)">
-          <i class="fa-brands fa-twitter"></i>
-        </a>
-      </div>
+    &copy; 2025 Archedge. All Rights Reserved.
+    </div>
+    <div class="social-media">
+    
+      <a href="https://www.facebook.com/profile.php?id=61580297951336" target="_blank" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/archedge_/" target="_blank" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://x.com/archedgepro" target="_blank" aria-label="X (Twitter)">
+        <i class="fa-brands fa-twitter"></i>
+      </a>
+    </div>
     </div>
 
   </footer>
   <script src="../../assets/js/navbar.js" defer></script>
   <script src="../../assets/js/brand-products.js" defer></script>
 
-  <!-- Full-page Animated Loader -->
-  <div id="loader" style="
+<!-- Full-page Animated Loader -->
+<div id="loader" style="
     display:none;
     position:fixed;
     top:0;
@@ -572,20 +655,16 @@
 
     <!-- Text -->
     <div class="loader-content" style="font-size:18px;">📦 Loading catalog, please wait....</div>
-  </div>
+</div>
 
-  <!-- Spinner Animation -->
-  <style>
-    @keyframes spin {
-      0% {
-        transform: rotate(0deg);
-      }
+<!-- Spinner Animation -->
+<style>
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+</style>
 
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-  </style>
 
 </body>
 
