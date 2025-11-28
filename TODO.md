@@ -1,0 +1,7 @@
+- [ ] Update title, description, keywords, canonical URL to focus on Archedge products
+- [ ] Update Open Graph and Twitter meta tags for Archedge
+- [ ] Update JSON-LD structured data for Archedge products
+- [ ] Update breadcrumb schema for Archedge
+- [x] Update h1 and product grid to include all Archedge products: SOL Flooring, LVT Flooring, PU Stones & Leaf, Tranquil Soffit, WPC Exterior Louvers, Garden Hub
+- [ ] Add appropriate images, descriptions, and PDF links for each product
+- [ ] Ensure SEO optimization with relevant keywords
