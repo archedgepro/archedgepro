@@ -114,9 +114,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const isModalHidden = modal && window.getComputedStyle(modal).display === "none";
 
-    if ((modal && isModalHidden || !modal) && !hasSubmittedAutoToday()) {
-      autoModal.style.display = "flex";
-    }
+    // if ((modal && isModalHidden || !modal) && !hasSubmittedAutoToday()) {
+    //   autoModal.style.display = "flex";
+    // }
 
     // Close modal
     if (autoCloseBtn) {
